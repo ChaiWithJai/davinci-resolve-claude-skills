@@ -1,0 +1,52 @@
+DEVREL TEMPLATE BIN STRUCTURE
+=============================
+
+Copy-paste these into the Media Pool. The numeric prefixes force sort order.
+
+Master/
+├── 01 — Footage/
+│   ├── A-Roll (your face / talking head)
+│   ├── B-Roll (cutaways, screen recordings, demos)
+│   └── Slates (color charts, audio sync claps)
+├── 02 — Audio/
+│   ├── Dialogue (lavalier, shotgun mic)
+│   └── Room tone (ambient bed, 30s minimum)
+├── 03 — Music/
+│   ├── Theme (your channel intro/outro music)
+│   └── Beds (background tracks under VO)
+├── 04 — Graphics/
+│   ├── Logos (your channel/company brand)
+│   ├── Lower thirds (saved Text+ presets)
+│   ├── End cards (subscribe / next video)
+│   └── Title cards (chapter dividers)
+├── 05 — SFX/
+│   ├── Transitions (whooshes, swooshes)
+│   └── UI sounds (clicks, notifications)
+├── 06 — VO/
+│   ├── Scratch (rough VO for timing)
+│   └── Final (re-recorded VO)
+├── 07 — Timelines/
+│   ├── MASTER_TIMELINE (your working timeline)
+│   ├── YOUTUBE_VERSION (16:9 with Smart Reframe applied)
+│   ├── LINKEDIN_VERSION (1:1 square)
+│   └── SHORTS_VERSION (9:16 vertical)
+└── 08 — Exports/
+    ├── Drafts (intermediate renders for review)
+    └── Final (final delivered MP4s)
+
+Power Bins (project-library-scoped, not project-scoped):
+├── BRAND ASSETS/
+│   ├── Logo PNG/SVG
+│   ├── Brand colors LUT
+│   └── Standard end card
+└── REUSABLE MUSIC/
+
+Smart Bins (dynamic queries — set up after you have media):
+├── Today's Footage (Date Modified = today)
+├── Selects (Flag = Green)
+└── Soundbites (Keywords contains "soundbite")
+
+Tip: Keep this file printed/visible while creating bins for the first
+time — it is faster than typing into the UI from memory.
+
+Reference: Editor's Guide pp. 246-321 (Lesson 5, Project Organization)
