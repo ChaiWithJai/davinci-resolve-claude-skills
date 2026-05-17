@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "deliverable_requirements": {
+    "layered_resolve_timeline_required": true,
+    "flattened_render_only_is_insufficient": true,
+    "original_source_tracks_visible": true,
+    "disabled_master_reference_track_required": true,
+    "benchmark_failure_markers_required": true,
+    "resolve_visible_start_audit_required": true,
+    "ui_or_api_timeline_audit_required_before_final": true
+  },
+  "audio_requirements": {
+    "dialogue_is_primary": true,
+    "audio_quality_audit_required": true,
+    "music_must_duck_under_speech": true,
+    "target_dialogue_lufs_range": [-16, -14],
+    "instagram_reels_target_lufs_range": [-15, -13],
+    "instagram_reels_target_lufs": -14,
+    "true_peak_max_dbtp": -1.0,
+    "perceptual_listen_check_required": true
+  },
+  "caption_requirements": {
+    "burned_in_caption_review_required": true,
+    "caption_style": "Netflix-style: large white bold sans, black outline or translucent box, bottom-safe, max two lines",
+    "proper_name_review_required": true,
+    "captions_must_be_regenerated_after_speed_or_text_changes": true
+  },
+  "format_requirements": {
+    "vertical_short_form": {
+      "aspect_ratio": "9:16",
+      "resolution": "1080x1920",
+      "duration_target": "up to 3 minutes",
+      "talking_speed": "1.1x when speaker-led unless it harms intelligibility"
+    },
+    "horizontal_long_form": {
+      "aspect_ratio": "16:9",
+      "resolution": "1920x1080",
+      "duration_target": "3-7 minutes",
+      "talking_speed": "1.0x unless otherwise requested"
+    }
+  },
+  "creative_requirements": {
+    "story_structure": "tell them what you will tell them, tell them, tell them what you told them",
+    "first_three_seconds_must_hook": true,
+    "no_transcript_only_cuts": true,
+    "speaker_or_broll_visible_during_spoken_sections": true,
+    "jump_cuts_must_be_covered_or_motivated": true,
+    "same_camera_consecutive_cuts_need_transform_change": true,
+    "no_numbered_story_skips": true,
+    "avoid_blurred_background_dead_space_for_reels": true,
+    "critic_first_review_required": true,
+    "four_lane_eval_required": true,
+    "four_lane_eval_dimensions": [
+      "video_editing_craft",
+      "creative_direction",
+      "visual_multimodal",
+      "audio_multimodal"
+    ],
+    "video_editing_craft_blockers": [
+      "same_camera_jump_cut_without_transform_or_broll",
+      "clipped_word_or_partial_phrase",
+      "mid_thought_semantic_break",
+      "no_audio_crossfade_or_room_tone_bridge"
+    ],
+    "editframe_assets_allowed": true,
+    "editframe_assets_scope": "motion graphics, animated captions, branded bumpers, lower thirds, waveform/title assets, and review proxies; keep source camera/audio editorial decisions in Resolve/FCPXML/EDL"
+  }
+}

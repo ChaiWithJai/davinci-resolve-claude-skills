@@ -25,6 +25,20 @@ When NOT to use:
 
 ## Quick reference — the cleanup chain in order
 
+### Phase -1 — source audit before cleanup
+
+Before applying effects, audit every candidate audio source. Do not assume the named lav/boom file is best. Check:
+
+- duration matches picture
+- silence percentage
+- integrated LUFS
+- true peak
+- clipping risk
+- audible room tone/hum
+- whether the track is actually silent
+
+For multi-camera workshop folders, keep the selected dialogue on `A1`, the processed dialogue on `A2`, music/ambience on `A3`, and SFX/bumpers on `A4`. If the external mic peaks near `0 dBFS`, preserve it as source but create a processed duplicate with conservative limiting/leveling before delivery.
+
 | Step | Tool | When to use | Where |
 |---|---|---|---|
 | 1. EQ rumble | **Clip EQ** (Inspector > Equalizer) | Always — every dialogue clip has sub-100Hz garbage | Inspector panel, audio clip selected |

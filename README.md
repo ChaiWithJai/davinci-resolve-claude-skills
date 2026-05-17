@@ -1,12 +1,16 @@
 # DaVinci Resolve Claude Skills
 
-Claude Code skills for DaVinci Resolve 20. Built for developers, content creators, and anyone shipping demos, tutorials, talks, or podcasts.
+Claude/Codex skills for DaVinci Resolve 20. Built for creators, operators, developers, and educators who need publishable video, not another pile of editing notes.
 
-These skills target real jobs to be done — not "click this menu." Each one solves a recognizable problem like "cut a 60-minute screen recording into a tight 8-minute demo" or "make webcam footage look broadcast-quality."
+The repo is organized around real jobs to be done: cut the story, repair the audio, keep the speaker in frame, add captions people can read on a phone, source useful B-roll, and hand the result back as an editable Resolve timeline.
+
+If you found this from Twitter: this is an open skill library for teaching AI agents professional post-production workflows with evidence, not vibes.
+
+If you came from Jai's content: this is the operating system behind turning raw workshop footage into Instagram Reels, Shorts, and YouTube videos that explain the offer clearly and feel worth watching.
 
 ## What is in the box
 
-Eight skills, each solving a specific job:
+Eleven skills, each solving a specific job:
 
 | Skill | Job to be done |
 |---|---|
@@ -18,6 +22,9 @@ Eight skills, each solving a specific job:
 | `davinci-resolve-titles-and-lower-thirds` | Branded titles and animated lower-thirds without leaving Resolve |
 | `davinci-resolve-export-multi-platform` | Export the same edit for YouTube (16:9), LinkedIn (square), Shorts (9:16), plus automate it |
 | `davinci-resolve-troubleshooting` | Diagnose the 5 most common "why is X broken" moments |
+| `davinci-resolve-computer-use-training` | Work through Blackmagic lesson homework with Computer Use, record evidence, and turn UI lessons into better production skills |
+| `davinci-resolve-social-editor` | Build speaker-led social edits with semantic cuts, B-roll, captions, audio checks, and Resolve handoff |
+| `social-video-folder-autocutter` | Turn a hard-drive folder into repeatable Instagram/YouTube cut briefs, B-roll plans, and eval artifacts |
 
 See `docs/jtbd-map.md` for the mapping from jobs to skills.
 
@@ -73,16 +80,34 @@ The skills auto-trigger when their description matches what you are asking for. 
 - "How do I make my webcam look better" → triggers `davinci-resolve-color-grade-webcam`
 - "The music in my podcast is drowning out the host" → triggers `davinci-resolve-audio-cleanup-podcast`
 - "Export my edit for LinkedIn and YouTube" → triggers `davinci-resolve-export-multi-platform`
+- "Make this folder into an Instagram Reel and YouTube cut" → triggers `social-video-folder-autocutter`
+- "Fix the jump cuts, audio, captions, B-roll, and Resolve handoff" → triggers `davinci-resolve-social-editor`
 
 You can also reference a skill explicitly: "use the davinci-resolve-color-grade-webcam skill on this footage."
 
+## Production Standard
+
+The current bar is not "a video exists." The bar is:
+
+- the story is coherent enough for a stranger to understand,
+- warm traffic immediately knows why the workshop matters,
+- dialogue is clean and dominant on phone speakers,
+- captions are burned in, timed to actual speech, and proofread,
+- B-roll proves claims or covers cuts instead of decorating the frame,
+- the color grade is bright, vibrant, and skin-tone safe,
+- the Resolve artifact remains layered enough for a human editor to take over.
+
+The strongest loop we learned is simple: when a cut is close, preserve the liked picture edit and fix the exact defect. For the latest Chai With Jai pass, that meant a caption-only finishing pass from word-level speech timing, followed by phone-safe still and loudness verification.
+
 ## Python automation
 
-Three skills include Python scripts that drive Resolve through its external scripting API:
+Several skills include Python scripts that drive Resolve through its external scripting API or prepare verified edit artifacts:
 
 - `skills/davinci-resolve-cut-screen-recording/scripts/auto_silence_cut.py`
 - `skills/davinci-resolve-export-multi-platform/scripts/multi_platform_render.py`
-- `skills/davinci-resolve-troubleshooting/` (diagnostic snippets)
+- `skills/davinci-resolve-computer-use-training/scripts/`
+- `skills/davinci-resolve-social-editor/scripts/`
+- `skills/social-video-folder-autocutter/scripts/`
 
 To run these scripts you must enable external scripting in Resolve:
 

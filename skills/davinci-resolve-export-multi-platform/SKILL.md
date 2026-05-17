@@ -32,6 +32,17 @@ When NOT to use:
 | LinkedIn (feed) | 1080x1080 (square) | Streaming (-16 LUFS) | H.264 |
 | Reels / Shorts / TikTok | 1080x1920 (vertical) | Streaming (-16 LUFS) | H.264 |
 
+For HITL Resolve handoffs, create separate timelines before rendering:
+
+- `Instagram Semantic Cut` or equivalent for vertical social.
+- `YouTube Semantic Cut` or equivalent for horizontal long form.
+- V1/V2/V3 for source picture layers.
+- V4 for burned-caption/title graphics.
+- A1/A2 for source and processed dialogue.
+- A3/A4 for music, SFX, bumpers.
+
+Do not treat an SRT file as enough when the user asked for burned-in Netflix-style captions. Captions must be visible in the video frame and editable as a layer or template until final render.
+
 ## Steps
 
 ### Phase 1 — Reframe your 16:9 source for vertical and square versions

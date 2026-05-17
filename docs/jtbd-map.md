@@ -16,19 +16,22 @@ Use this when you want to find the right skill for a specific job. Each row maps
 | 8 | Auto-transcribed captions + fix errors | `davinci-resolve-export-multi-platform` (merged) | Subtitle track + Create Subtitles from Audio workflow |
 | 9 | Batch-render with Python scripting API | `davinci-resolve-export-multi-platform` (script lives there) | `scripts/multi_platform_render.py` |
 | 10 | Troubleshoot "why is X broken" | `davinci-resolve-troubleshooting` | Top 5: red playback indicator, missing media, audio out of sync, GPU crashes, render queue stalls |
+| 11 | Turn a hard-drive folder into Instagram/YouTube cut briefs | `social-video-folder-autocutter` | Media/audio audit, story plan, B-roll plan, eval artifact contract |
+| 12 | Build a publishable speaker-led social edit | `davinci-resolve-social-editor` | Semantic cuts, audio gates, captions, B-roll as evidence, Resolve HITL handoff |
+| 13 | Work through Resolve homework with evidence | `davinci-resolve-computer-use-training` | Uses official scripting first, Computer Use for UI learning and proof |
 
-Plus one foundational skill — `davinci-resolve-setup` — that the other seven all assume.
+Plus one foundational skill — `davinci-resolve-setup` — that the production skills all assume.
 
 ## Why some jobs were merged into existing skills
 
 - **Animated logo (job #5)** shares the **Text+** node and Fusion animation modifiers with lower-thirds. The mental model "use Text+, then animate a transform parameter" is identical for both cases.
-- **Captions (job #8)** lives entirely in the Deliver workflow and uses the same Subtitle track that the multi-platform export skill already needs.
+- **Captions (job #8)** starts in the export workflow, but production social cuts must still run the `davinci-resolve-social-editor` caption gate when burned-in, phone-safe, proofread captions are required.
 
 ## Jobs not yet in this repo (and why)
 
 These would be valuable but did not make the first cut:
 
-- **`davinci-resolve-multicam-interview`** — useful for podcast/talkshow setups with 2-3 cameras. Deferred because most content is single-camera. Editor's Guide pp. 197-243 covers the full multicam workflow.
+- **`davinci-resolve-multicam-interview`** — useful for podcast/talkshow setups with 2-3 cameras. Currently handled inside `davinci-resolve-social-editor` for speaker-led social edits; a narrower standalone skill may still be useful later. Editor's Guide pp. 197-243 covers the full multicam workflow.
 - **`davinci-resolve-green-screen-keying`** — Fusion-based, requires the Delta Keyer (Fusion VFX Guide pp. 111-138). Deferred because most company demo videos are screen recordings, not chroma-key shoots.
 - **`davinci-resolve-dolby-atmos-immersive`** — Fairlight Audio Post pp. 643-724. Deferred — overkill for the typical audience.
 - **`davinci-resolve-3d-camera-tracking`** — Advanced VFX pp. 129-159. Same reason.

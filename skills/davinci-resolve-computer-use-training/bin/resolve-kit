@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../scripts" && pwd)"
+
+cmd="${1:-doctor}"
+shift || true
+
+case "$cmd" in
+  doctor)
+    python3 "$SCRIPT_DIR/resolve_doctor.py" "$@"
+    ;;
+  install)
+    python3 "$SCRIPT_DIR/install_resolve_kit.py" "$@"
+    ;;
+  stage-folder)
+    python3 "$SCRIPT_DIR/stage_folder_timeline.py" "$@"
+    ;;
+  validate)
+    python3 "$SCRIPT_DIR/validate_timeline.py" "$@"
+    ;;
+  capstone)
+    python3 "$SCRIPT_DIR/capstone_folder_pipeline.py" "$@"
+    ;;
+  stage-decisions)
+    python3 "$SCRIPT_DIR/stage_edit_decisions.py" "$@"
+    ;;
+  *)
+    echo "Usage: resolve-kit {doctor|install|stage-folder|validate|capstone|stage-decisions} [args...]" >&2
+    exit 2
+    ;;
+esac
